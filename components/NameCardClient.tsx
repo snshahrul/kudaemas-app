@@ -256,6 +256,47 @@ export function NameCardClient() {
                 Crafted with fire in Malaysia
               </p>
             </motion.div>
+
+            {/* QR Code Section - Add this after social icons */}
+            <motion.div
+              custom={7}
+              variants={fadeUp}
+              initial="hidden"
+              animate={mounted ? "visible" : "hidden"}
+              className="mt-7"
+            >
+              <div className="mx-auto inline-block rounded-2xl border-2 border-gold/30 bg-white p-3 shadow-[0_0_30px_rgba(201,162,75,0.2)] transition-all duration-300 hover:shadow-[0_0_40px_rgba(201,162,75,0.35)]">
+                <div className="relative h-32 w-32 sm:h-36 sm:w-36">
+                  <Image
+                    src="/qr.png"
+                    alt="Scan QR code to save contact"
+                    fill
+                    className="object-contain"
+                    priority
+                  />
+                </div>
+                <p className="mt-2 text-[9px] font-bold uppercase tracking-[0.25em] text-forest">
+                  Scan to Save Contact
+                </p>
+              </div>
+              <p className="mt-3 text-[10px] text-cream/40">
+                Point your camera to connect instantly
+              </p>
+            </motion.div>
+
+            {/* Footer - update custom number to 8 */}
+            <motion.div
+              custom={8}
+              variants={fadeUp}
+              initial="hidden"
+              animate={mounted ? "visible" : "hidden"}
+              className="mt-8"
+            >
+              <div className="h-px bg-gradient-to-r from-transparent via-gold/20 to-transparent" />
+              <p className="mt-4 font-display text-[11px] italic text-gold/40">
+                Crafted with fire in Malaysia
+              </p>
+            </motion.div>
           </div>
         </div>
 

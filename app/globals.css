@@ -134,3 +134,32 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   filter: invert(0.75) sepia(0.6) saturate(3) hue-rotate(3deg);
   cursor: pointer;
 }
+
+/* QR Code container styles */
+.qr-wrapper {
+  position: relative;
+  background: white;
+  border-radius: 1rem;
+  padding: 1rem;
+  box-shadow: 0 0 30px rgba(201, 162, 75, 0.3);
+  transition: all 0.3s ease;
+}
+
+.qr-wrapper:hover {
+  box-shadow: 0 0 50px rgba(201, 162, 75, 0.5);
+  transform: translateY(-2px);
+}
+
+/* Optional: Add a subtle pulse animation */
+@keyframes qrPulse {
+  0%, 100% {
+    box-shadow: 0 0 30px rgba(201, 162, 75, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 50px rgba(201, 162, 75, 0.5);
+  }
+}
+
+.qr-pulse {
+  animation: qrPulse 3s ease-in-out infinite;
+}
